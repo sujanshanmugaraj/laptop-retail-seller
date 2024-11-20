@@ -1,0 +1,19 @@
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {%for field in form%}
+        <div>
+            <label class="">
+                {{field.label}}
+            </label>
+            {{field.errors}}
+            {{field}}    
+        </div>
+        {%endfor%}
+            <input type='text' name='Feature'  />
+            <input type="submit" value="Finish" style="margin-bottom: 20;"/>
+    </form>
+    <a href = "/">
+        <button> Back </button>
+    </a>
+</body>
